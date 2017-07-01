@@ -1,9 +1,10 @@
-web3.eth.filter('latest', function(err, blockHash) {
-  var contributingAmount = 10; // Unit: Ether, Change the value into the amount you want
+personal.unlockAccount(eth.coinbase); // Unlock account to send TX without need of entering passphrase.
 
+var contributingAmount = 10; // Unit: Ether, Change the value into the amount you want
+
+web3.eth.filter('latest', function(err, blockHash) {
   var block = web3.eth.getBlock(blockHash);
   var blockNumber = block.number;
-
   if (blockNumber === 3903900) { // Starts at blockNumber 3903900
     web3.eth.sendTransaction({
       from: eth.coinbase, // Might want to change if you're going to use other than coinbase wallet.
