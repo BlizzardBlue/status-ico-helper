@@ -6,7 +6,7 @@ Helps you contribute Status ICO in a lightspeed by programmatically sending TX.
 Carefully follow the steps below.
 
 ### Step 1
-Launch `geth` with `console` option.
+Launch `geth` under `console` mode.
 ```
 $ geth console
 ```
